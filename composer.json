@@ -1,0 +1,51 @@
+{
+    "name": "eozden/api-response",
+    "description": "Laravel api response macros",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enes Özden",
+            "email": "enes@emarka.com.tr"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "json",
+        "api",
+        "response",
+        "builder",
+        "rest",
+        "helper",
+        "php7",
+        "resource",
+        "macro"
+    ],
+
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+          "Eozden\\ApiResponse\\": "src"
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Eozden\\ApiResponse\\Tests\\": "tests"
+        }
+    },
+
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.4"
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eozden\\ApiResponse\\ApiResponseServiceProvider"
+            ]
+        }
+    }
+}
