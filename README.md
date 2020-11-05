@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/eozden/api-response.svg?style=flat-square)](https://packagist.org/packages/eozden/api-response)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://img.shields.io/travis/eozden/api-response/master.svg?style=flat-square)](https://travis-ci.org/eozden/api-response)
+[![Build Status](https://travis-ci.com/eozden/api-response.svg?branch=master)](https://travis-ci.com/eozden/api-response)
 [![StyleCI](https://github.styleci.io/repos/310403798/shield?branch=master)](https://github.styleci.io/repos/310403798?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/eozden/api-response.svg?style=flat-square)](https://packagist.org/packages/eozden/api-response)
 
