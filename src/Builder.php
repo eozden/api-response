@@ -32,7 +32,7 @@ class Builder
     {
         $this->code = $code;
 
-        if(is_null($this->code)) {
+        if (is_null($this->code)) {
             $this->code = config("api-response.default.{$this->type}");
         }
 
@@ -41,7 +41,7 @@ class Builder
 
     private function success()
     {
-        if($this->type == 'error') {
+        if ($this->type == 'error') {
             return false;
         }
 
@@ -67,7 +67,7 @@ class Builder
             'code'    => $this->code,
             'locale'  => $this->locale(),
             'message' => $this->message(),
-            'data'    => $this->data
+            'data'    => $this->data,
         ], $this->code);
     }
 

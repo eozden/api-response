@@ -2,11 +2,11 @@
 
 namespace Eozden\ApiResponse;
 
-use Illuminate\Routing\Router;
-use Eozden\ApiResponse\Builder;
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Response;
 use Eozden\ApiResponse\Http\Middleware\JsonMiddleware;
+use Eozden\ApiResponse\Builder;
+use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\ServiceProvider;
 
 class ApiResponseServiceProvider extends ServiceProvider
 {
@@ -20,11 +20,10 @@ class ApiResponseServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'api-response');
 
         if ($this->app->runningInConsole()) {
-
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('api-response.php'),
             ], 'config');
-            
+
             $this->publishes([
                 __DIR__.'/../resources/lang' => resource_path('lang/vendor/api-response'),
             ], 'resources');
@@ -38,7 +37,7 @@ class ApiResponseServiceProvider extends ServiceProvider
             return Builder::error($data, $code);
         });
 
-        if(config('api-response.force', true)) {
+        if (config('api-response.force', true)) {
             $router = $this->app->make(Router::class);
             $router->pushMiddlewareToGroup('api', JsonMiddleware::class);
         }

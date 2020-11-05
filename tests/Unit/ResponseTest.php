@@ -2,8 +2,8 @@
 
 namespace Eozden\ApiResponse\Tests\Unit;
 
-use Illuminate\Http\JsonResponse;
 use Eozden\ApiResponse\Tests\TestCase;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Response;
 
 class ResponseTest extends TestCase
