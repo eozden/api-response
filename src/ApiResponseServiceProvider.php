@@ -3,7 +3,6 @@
 namespace Eozden\ApiResponse;
 
 use Eozden\ApiResponse\Http\Middleware\JsonMiddleware;
-use Eozden\ApiResponse\Builder;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\ServiceProvider;
@@ -32,7 +31,7 @@ class ApiResponseServiceProvider extends ServiceProvider
         Response::macro('ok', function ($data = null, int $code = null) {
             return Builder::ok($data, $code);
         });
-        
+
         Response::macro('error', function ($data = null, int $code = null) {
             return Builder::error($data, $code);
         });

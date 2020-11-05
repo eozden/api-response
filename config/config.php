@@ -3,12 +3,12 @@
 return [
 
     'default' => [
-		'ok'    => \Eozden\ApiResponse\ResponseStatus::OK,
-		'error' => \Eozden\ApiResponse\ResponseStatus::UNPROCESSABLE_ENTITY,
+        'ok'    => \Eozden\ApiResponse\ResponseStatus::OK,
+        'error' => \Eozden\ApiResponse\ResponseStatus::UNPROCESSABLE_ENTITY,
     ],
-    
+
     'force' => true,
-    
+
     'map' => [
         \Eozden\ApiResponse\ResponseStatus::OK                    => 'ok',
         \Eozden\ApiResponse\ResponseStatus::CREATED               => 'created',
@@ -21,6 +21,6 @@ return [
         \Eozden\ApiResponse\ResponseStatus::NOT_FOUND             => 'not_found',
         \Eozden\ApiResponse\ResponseStatus::CONFLICT              => 'conflict',
         \Eozden\ApiResponse\ResponseStatus::UNPROCESSABLE_ENTITY  => 'unprocessable_entity',
-        \Eozden\ApiResponse\ResponseStatus::INTERNAL_SERVER_ERROR => 'internal_server_error'
-	]
+        \Eozden\ApiResponse\ResponseStatus::INTERNAL_SERVER_ERROR => 'internal_server_error',
+    ],
 ];

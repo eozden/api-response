@@ -19,7 +19,7 @@ class Builder
         $this->type = $type;
 
         return $this;
-    }    
+    }
 
     public function data($data)
     {
@@ -50,7 +50,7 @@ class Builder
 
     private function locale()
     {
-        return App::getLocale();        
+        return App::getLocale();
     }
 
     private function message()
@@ -58,7 +58,7 @@ class Builder
         $message = config("api-response.map.{$this->code}", null);
 
         return trans('api-response::apiresponse.'.$message);
-    }    
+    }
 
     public function build()
     {
