@@ -12,5 +12,5 @@ return [
     'not_found'             => 'NOT FOUND',
     'conflict'              => 'CONFLICT',
     'unprocessable_entity'  => 'UNPROCESSABLE ENTITY',
-    'internal_server_error' => 'INTERNAL SERVER ERROR'
+    'internal_server_error' => 'INTERNAL SERVER ERROR',
 ];
