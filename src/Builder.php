@@ -4,6 +4,7 @@ namespace Eozden\ApiResponse;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
+use Eozden\ApiResponse\Error;
 
 class Builder
 {
@@ -84,7 +85,7 @@ class Builder
     {
         return (new self())
             ->type('error')
-            ->data($data)
+            ->data((new Error($data))->toArray())
             ->code($code)
             ->build();
     }
