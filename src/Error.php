@@ -17,14 +17,14 @@ class Error
     {
         $data = $this->error;
 
-        if(is_string($this->error)) {
+        if (is_string($this->error)) {
             $data = ['general' => $this->error];
         }
 
-        if($this->error instanceof ValidationException) {
+        if ($this->error instanceof ValidationException) {
             $data = $this->createFromValidationException();
         }
-        
+
         return $data;
     }
 
@@ -32,21 +32,21 @@ class Error
     {
         $pack = $this->pack();
 
-        if(is_null($pack)) {
+        if (is_null($pack)) {
             return null;
         }
 
         return [
-            'error' => $pack
+            'error' => $pack,
         ];
     }
 
     public function createFromValidationException()
     {
         $response = [];
-        foreach($this->error->errors() as $key => $error) {
+        foreach ($this->error->errors() as $key => $error) {
             $response = array_merge($response, [
-                $key => array_shift($error)
+                $key => array_shift($error),
             ]);
         }
 
