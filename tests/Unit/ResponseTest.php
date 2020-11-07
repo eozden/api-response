@@ -60,15 +60,15 @@ class ResponseTest extends TestCase
     public function test_validation_error_response()
     {
         $exception = ValidationException::withMessages([
-            "one" => ["Validation Message #1"], 
-            "two" => ['Validation Message #2']
+            'one' => ['Validation Message #1'],
+            'two' => ['Validation Message #2'],
         ]);
 
         $error = Response::error($exception);
 
         $content = json_decode($error->content());
 
-        $this->assertEquals("Validation Message #1", $content->data->error->one);
-        $this->assertEquals("Validation Message #2", $content->data->error->two);
+        $this->assertEquals('Validation Message #1', $content->data->error->one);
+        $this->assertEquals('Validation Message #2', $content->data->error->two);
     }
 }

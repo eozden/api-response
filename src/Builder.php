@@ -4,7 +4,6 @@ namespace Eozden\ApiResponse;
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
-use Eozden\ApiResponse\Error;
 
 class Builder
 {
