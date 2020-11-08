@@ -72,7 +72,7 @@ class Builder
                 'message' => $this->message(),
             ]);
         }
-        
+
         return Response::json([
             'success' => $this->success(),
             'code'    => $this->code,
