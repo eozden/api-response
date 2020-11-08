@@ -2,10 +2,9 @@
 
 namespace Eozden\ApiResponse;
 
+use Illuminate\Http\Resources\Json\ResourceCollection;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
-use Eozden\ApiResponse\Error;
-use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class Builder
 {
