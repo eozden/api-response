@@ -5,6 +5,7 @@ namespace Eozden\ApiResponse;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
 use Eozden\ApiResponse\Error;
+use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class Builder
 {
@@ -63,6 +64,15 @@ class Builder
 
     public function build()
     {
+        if ($this->data instanceof ResourceCollection) {
+            return $this->data->additional([
+                'success' => $this->success(),
+                'code'    => $this->code,
+                'locale'  => $this->locale(),
+                'message' => $this->message(),
+            ]);
+        }
+        
         return Response::json([
             'success' => $this->success(),
             'code'    => $this->code,
