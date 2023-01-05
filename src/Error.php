@@ -18,7 +18,7 @@ class Error
         $data = $this->error;
 
         if (is_string($this->error)) {
-            $data = ['general' => $this->error];
+            $data = ['all' => $this->error];
         }
 
         if ($this->error instanceof ValidationException) {
